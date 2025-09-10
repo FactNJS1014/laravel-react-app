@@ -5,7 +5,8 @@ function App() {
     <div>
       <h1>Hello App</h1>
         <nav>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className={"text-2xl font-bold"}>Home</NavLink>
+            <NavLink to="/about" className={"text-2xl font-bold ms-3"}>About</NavLink>
         </nav>
         <Router/>
     </div>
