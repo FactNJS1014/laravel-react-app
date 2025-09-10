@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Router from "../router/Index.jsx";
-import { IoHome , IoInformationCircle  } from "react-icons/io5";
+import { IoHome , IoInformationCircle } from "react-icons/io5";
+import { RiContactsBook2Fill } from "react-icons/ri";
+
 
 function App() {
     const active = "px-3 bg-purple-600 text-white rounded-xs";
@@ -21,19 +23,19 @@ function App() {
                     <div className="flex gap-3">
                         <NavLink
                             to="/"
-                            className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-xs" : "px-4 py-1 bg-blue-300 rounded-xs")}
+                            className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-sm" : "px-4 py-1 bg-blue-300 rounded-sm hover:bg-sky-400")}
                         >
                             <IoHome className="inline text-2xl" />
                         </NavLink>
                         <NavLink
                             to="/about"
-                            className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-xs" : "px-4 py-1 bg-blue-300 rounded-xs")}
+                            className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-sm" : "px-4 py-1 bg-blue-300 rounded-sm hover:bg-sky-400")}
 
                         >
                             <IoInformationCircle className="inline text-2xl" />
                         </NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-xs" : "px-4 py-1 bg-blue-300 rounded-xs")} to="/contact">
-                            Contact
+                        <NavLink className={({ isActive }) => (isActive ? "px-4 py-1 bg-blue-600 text-white rounded-sm" : "px-4 py-1 bg-blue-300 rounded-sm hover:bg-sky-400")} to="/contact">
+                            <RiContactsBook2Fill className="inline text-2xl" />
                         </NavLink>
                     </div>
                 </div>
