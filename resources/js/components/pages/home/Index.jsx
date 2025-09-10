@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 function Index() {
   const [name, setName] = useState('')
+  const [submittedName, setSubmittedName] = useState('') // state สำหรับเก็บค่าหลัง submit
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(`Hello, ${name}`)
-    setName('')  // ใช้ state ตรงๆ
+    setSubmittedName(name) // เอาค่า name มาเก็บไว้
+    setName('') // เคลียร์ input
   }
 
   return (
@@ -15,8 +16,8 @@ function Index() {
         <input
           type="text"
           name="name"
-          value={name}              // ผูกกับ state
-          onChange={(e) => setName(e.target.value)} // อัปเดต state
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="p-1 border"
         />
         <input
@@ -25,8 +26,15 @@ function Index() {
           className="p-1 bg-green-400 rounded-sm ms-3"
         />
       </form>
+
+      <div className="p-3">
+        {submittedName && (   // แสดงผลเฉพาะตอนที่กด submit แล้ว
+          <h1 className="text-2xl font-bold">Hello {submittedName}</h1>
+        )}
+      </div>
     </div>
   )
 }
 
 export default Index
+ 
