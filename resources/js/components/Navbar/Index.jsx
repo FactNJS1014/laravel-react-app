@@ -2,6 +2,7 @@ import { IoHome, IoInformationCircle } from "react-icons/io5";
 import { RiContactsBook2Fill } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
+
 function Index() {
     const handleClick = () => {
         const nav = document.querySelector("nav ul");
